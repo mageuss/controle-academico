@@ -11,6 +11,22 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'calendario',
+    loadChildren: () => import('./paginas/calendario/calendario.module').then( m => m.CalendarioPageModule)
+  },
+  {
+    path: 'notas',
+    loadChildren: () => import('./paginas/notas/notas.module').then( m => m.NotasPageModule)
+  },
+  {
+    path: 'inicio',
+    loadChildren: () => import('./paginas/inicio/inicio.module').then( m => m.InicioPageModule)
+  },
+  {
+    path: 'action-sheet',
+    loadChildren: () => import('./paginas/action-sheet/action-sheet.module').then( m => m.ActionSheetPageModule)
+  },
 ];
 
 @NgModule({
