@@ -18,16 +18,6 @@ const routes: Routes = [
       }
     ]
   },
-/*  
-{
-    path: 'calendario',
-    loadChildren: () => import('../calendario/calendario.module').then( m => m.CalendarioPageModule)
-  },
-  {
-    path: 'notas',
-    loadChildren: () => import('../notas/notas.module').then( m => m.NotasPageModule)
-  }
-  */
   {
     path: 'inicio',
     loadChildren: () => import('../inicio/inicio.module').then( m => m.InicioPageModule)
