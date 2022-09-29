@@ -7,6 +7,14 @@ const routes: Routes = [
   {
     path: '',
     component: InicioPage
+  },
+  {
+    path: 'calendario',
+    loadChildren: () => import('../calendario/calendario.module').then( m => m.CalendarioPageModule)
+  },
+  {
+    path: 'notas',
+    loadChildren: () => import('../notas/notas.module').then( m => m.NotasPageModule)
   }
 ];
 
