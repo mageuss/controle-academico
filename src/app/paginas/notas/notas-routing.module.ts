@@ -7,7 +7,15 @@ const routes: Routes = [
   {
     path: '',
     component: NotasPage
-  }
+  },/*
+  {
+    path: 'inicio',
+    loadChildren: () => import('../inicio/inicio.module').then( m => m.InicioPageModule)
+  }, */
+  {
+    path: 'calendario',
+    loadChildren: () => import('../calendario/calendario.module').then( m => m.CalendarioPageModule)
+  },
 ];
 
 @NgModule({

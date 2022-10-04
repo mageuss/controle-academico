@@ -6,26 +6,26 @@ import { InicioPage } from './inicio.page';
 const routes: Routes = [
   {
     path: '',
-    component: InicioPage,
-    children: [
-      {
-        path: 'calendario',
-        loadChildren: () => import('../calendario/calendario.module').then( m => m.CalendarioPageModule)
-      },
-      {
-        path: 'notas',
-        loadChildren: () => import('../notas/notas.module').then( m => m.NotasPageModule)
-      }
-    ]
+    component: InicioPage, 
   },
   {
     path: 'inicio',
-    loadChildren: () => import('../inicio/inicio.module').then( m => m.InicioPageModule)
-  }
+    loadChildren: () => import('../inicio/inicio.module').then(m => m.InicioPageModule)
+  },
+  {
+    path: 'calendario',
+    loadChildren: () => import('../action-sheet/action-sheet.module').then(m => m.ActionSheetPageModule)
+  },
+  {
+    path: 'notas',
+    loadChildren: () => import('../notas/notas.module').then(m => m.NotasPageModule)
+  },
+  
+
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class InicioPageRoutingModule {}
+export class InicioPageRoutingModule { }
