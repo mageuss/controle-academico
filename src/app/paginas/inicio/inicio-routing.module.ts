@@ -7,14 +7,17 @@ const routes: Routes = [
   {
     path: '',
     component: InicioPage, 
+    children: [
+
+      {
+        path: 'calendario',
+        loadChildren: () => import('../action-sheet/action-sheet.module').then(m => m.ActionSheetPageModule)
+      }
+    ]
   },
   {
     path: 'inicio',
     loadChildren: () => import('../inicio/inicio.module').then(m => m.InicioPageModule)
-  },
-  {
-    path: 'calendario',
-    loadChildren: () => import('../action-sheet/action-sheet.module').then(m => m.ActionSheetPageModule)
   },
   {
     path: 'notas',
