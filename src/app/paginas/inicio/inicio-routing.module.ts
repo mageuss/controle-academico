@@ -6,24 +6,24 @@ import { InicioPage } from './inicio.page';
 const routes: Routes = [
   {
     path: '',
-    component: InicioPage, 
+    component: InicioPage,
     children: [
 
       {
         path: 'calendario',
         loadChildren: () => import('../action-sheet/action-sheet.module').then(m => m.ActionSheetPageModule)
+      },
+      {
+        path: 'notas',
+        loadChildren: () => import('../notas/notas.module').then(m => m.NotasPageModule)
       }
     ]
   },
   {
     path: 'inicio',
     loadChildren: () => import('../inicio/inicio.module').then(m => m.InicioPageModule)
-  },
-  {
-    path: 'notas',
-    loadChildren: () => import('../notas/notas.module').then(m => m.NotasPageModule)
-  },
-  
+  }
+
 
 ];
 
